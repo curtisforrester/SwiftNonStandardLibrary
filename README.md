@@ -1,11 +1,10 @@
 Swift Non-Standard Library
 ==========================
 
+**NOTE:** There is currently a bug in the Swift compiler that prevents the unit tests
+from compiling because the framework extends built-in generics like SequenceOf&lt;T&gt;.
+I am currently working around it by running the code in a console project. 
 
-This project is currently in the form of a console project to facilitate testing
-because a bug prevents unit tests from being able to import a framework when
-the framework extends certain built-in types. In the future it will be converted 
-to a framework project.
 
 
 Current areas of interest:
