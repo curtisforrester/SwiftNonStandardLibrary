@@ -9,7 +9,6 @@
 import Foundation
 
 
-
 //class Future<T> {
 //    
 //}
@@ -17,7 +16,7 @@ class TaskVoid {
     
 }
 
-class Task<T> {
+class Task<T> : TaskVoid {
     
 }
 
@@ -34,4 +33,6 @@ func async(block: @auto_closure ()->()) -> TaskVoid {
 
 func async<T>(block: @auto_closure ()->(T)) -> Task<T> {
     return Task()
+    
+
 }

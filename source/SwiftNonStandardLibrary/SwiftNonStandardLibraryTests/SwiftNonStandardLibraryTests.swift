@@ -138,6 +138,39 @@ class SwiftNonStandardLibraryTests: XCTestCase {
         XCTAssert(expected == actual, "hash value match")
     }
     
+    func testThreadLocalSlotSingleThread() {
+        let s:ThreadLocalSlot<NSString> = ThreadLocalSlot()
+        let i = 592
+        s.value = "\(i)"
+        
+        XCTAssert(s.value == "592", "slot must have expected value")
+    }
+    
+    func testThreadLocalSlotGCD() {
+        let x:ThreadLocalSlot<NSString> = ThreadLocalSlot()
+        let myqueue = dispatch_queue_create("com.obsolete-software.testQueue", DISPATCH_QUEUE_CONCURRENT)
+        
+        x.value = "main"
+        var count = 0
+        for var i = 0; i < 100; i++ {
+            dispatch_async(myqueue) {
+                let myStr = "op \(count++)"
+                x.value = myStr
+                for var v = 0; v < 500; v++ {
+                    XCTAssert(x.value == myStr, "operation must have expected value not in conflict with other operations")
+                }
+                
+            }
+        }
+        
+        dispatch_barrier_sync(myqueue) {
+            //wait for the queued blocks to complete
+        }
+        
+        
+        XCTAssert(x.value == "main", "slot has expected value after all operations finished")
+    }
+    
 }
 
 class DataHolder {

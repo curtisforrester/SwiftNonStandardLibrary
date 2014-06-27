@@ -7,41 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE8139FC1947FC4400945504 /* SwiftNonStandardLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8139F01947FC4400945504 /* SwiftNonStandardLibrary.framework */; };
+		CE5C4089195BB84A00EB3A13 /* SwiftNonStandardLibrary_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE813A111947FCBA00945504 /* SwiftNonStandardLibrary_iOS.framework */; };
+		CE5C408C195BB84F00EB3A13 /* SwiftNonStandardLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8139F01947FC4400945504 /* SwiftNonStandardLibrary.framework */; };
 		CE813A031947FC4400945504 /* SwiftNonStandardLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE813A021947FC4400945504 /* SwiftNonStandardLibraryTests.swift */; };
 		CE813A161947FCBA00945504 /* SwiftNonStandardLibrary_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CE813A151947FCBA00945504 /* SwiftNonStandardLibrary_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE813A1C1947FCBA00945504 /* SwiftNonStandardLibrary_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE813A111947FCBA00945504 /* SwiftNonStandardLibrary_iOS.framework */; };
 		CE813A231947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE813A221947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift */; };
+		CEEE970C195D051600914127 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE970B195D051600914127 /* Threading.swift */; };
+		CEEE970D195D051600914127 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE970B195D051600914127 /* Threading.swift */; };
+		CEEE970F195D0B9900914127 /* ThreadingTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */; };
+		CEEE9710195D0B9A00914127 /* ThreadingTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */; };
+		CEEE9712195D0BFF00914127 /* ThreadingTrampolines.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEE9711195D0BFF00914127 /* ThreadingTrampolines.m */; };
+		CEEE9713195D0BFF00914127 /* ThreadingTrampolines.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEE9711195D0BFF00914127 /* ThreadingTrampolines.m */; };
 		CEF03963195BB45100D4D491 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395B195BB45100D4D491 /* Console.swift */; };
-		CEF03964195BB45100D4D491 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395B195BB45100D4D491 /* Console.swift */; };
 		CEF03965195BB45100D4D491 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395B195BB45100D4D491 /* Console.swift */; };
-		CEF03966195BB45100D4D491 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395B195BB45100D4D491 /* Console.swift */; };
 		CEF03967195BB45100D4D491 /* Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395C195BB45100D4D491 /* Exceptions.swift */; };
-		CEF03968195BB45100D4D491 /* Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395C195BB45100D4D491 /* Exceptions.swift */; };
 		CEF03969195BB45100D4D491 /* Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395C195BB45100D4D491 /* Exceptions.swift */; };
-		CEF0396A195BB45100D4D491 /* Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395C195BB45100D4D491 /* Exceptions.swift */; };
 		CEF0396B195BB45100D4D491 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395D195BB45100D4D491 /* GCD.swift */; };
-		CEF0396C195BB45100D4D491 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395D195BB45100D4D491 /* GCD.swift */; };
 		CEF0396D195BB45100D4D491 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395D195BB45100D4D491 /* GCD.swift */; };
-		CEF0396E195BB45100D4D491 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395D195BB45100D4D491 /* GCD.swift */; };
 		CEF0396F195BB45100D4D491 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395E195BB45100D4D491 /* main.swift */; };
-		CEF03970195BB45100D4D491 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395E195BB45100D4D491 /* main.swift */; };
 		CEF03971195BB45100D4D491 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395E195BB45100D4D491 /* main.swift */; };
-		CEF03972195BB45100D4D491 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395E195BB45100D4D491 /* main.swift */; };
 		CEF03973195BB45100D4D491 /* OSSExceptionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CEF0395F195BB45100D4D491 /* OSSExceptionHelper.h */; };
 		CEF03974195BB45100D4D491 /* OSSExceptionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CEF0395F195BB45100D4D491 /* OSSExceptionHelper.h */; };
 		CEF03975195BB45100D4D491 /* OSSExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF03960195BB45100D4D491 /* OSSExceptionHelper.m */; };
-		CEF03976195BB45100D4D491 /* OSSExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF03960195BB45100D4D491 /* OSSExceptionHelper.m */; };
 		CEF03977195BB45100D4D491 /* OSSExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF03960195BB45100D4D491 /* OSSExceptionHelper.m */; };
-		CEF03978195BB45100D4D491 /* OSSExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF03960195BB45100D4D491 /* OSSExceptionHelper.m */; };
 		CEF03979195BB45100D4D491 /* Sequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF03961195BB45100D4D491 /* Sequences.swift */; };
-		CEF0397A195BB45100D4D491 /* Sequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF03961195BB45100D4D491 /* Sequences.swift */; };
 		CEF0397B195BB45100D4D491 /* Sequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF03961195BB45100D4D491 /* Sequences.swift */; };
-		CEF0397C195BB45100D4D491 /* Sequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF03961195BB45100D4D491 /* Sequences.swift */; };
 		CEF0397D195BB45100D4D491 /* Tuples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF03962195BB45100D4D491 /* Tuples.swift */; };
-		CEF0397E195BB45100D4D491 /* Tuples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF03962195BB45100D4D491 /* Tuples.swift */; };
 		CEF0397F195BB45100D4D491 /* Tuples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF03962195BB45100D4D491 /* Tuples.swift */; };
-		CEF03980195BB45100D4D491 /* Tuples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF03962195BB45100D4D491 /* Tuples.swift */; };
 		CEF03981195BB59F00D4D491 /* SwiftNonStandardLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = CE8139F51947FC4400945504 /* SwiftNonStandardLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -54,6 +46,27 @@
 			remoteInfo = SwiftNonStandardLibrary;
 		};
 		CE5C4085195BB7B100EB3A13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE8139E71947FC4400945504 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE8139EF1947FC4400945504;
+			remoteInfo = SwiftNonStandardLibrary;
+		};
+		CE5C4087195BB7B100EB3A13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE8139E71947FC4400945504 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE8139EF1947FC4400945504;
+			remoteInfo = SwiftNonStandardLibrary;
+		};
+		CE5C408A195BB84A00EB3A13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE8139E71947FC4400945504 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE813A101947FCBA00945504;
+			remoteInfo = SwiftNonStandardLibrary_iOS;
+		};
+		CE5C408D195BB84F00EB3A13 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE8139E71947FC4400945504 /* Project object */;
 			proxyType = 1;
@@ -161,6 +174,9 @@
 		CE813A221947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNonStandardLibrary_iOSTests.swift; sourceTree = "<group>"; };
 		CE813A451947FF9A00945504 /* swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE813A461947FFB200945504 /* swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		CEEE970B195D051600914127 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
+		CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadingTrampolines.h; sourceTree = "<group>"; };
+		CEEE9711195D0BFF00914127 /* ThreadingTrampolines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadingTrampolines.m; sourceTree = "<group>"; };
 		CEF03959195BB45000D4D491 /* SwiftNonStandardLibraryTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftNonStandardLibraryTests-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		CEF0395A195BB45000D4D491 /* SwiftNonStandardLibrary_iOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftNonStandardLibrary_iOSTests-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		CEF0395B195BB45100D4D491 /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
@@ -185,7 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8139FC1947FC4400945504 /* SwiftNonStandardLibrary.framework in Frameworks */,
+				CE5C408C195BB84F00EB3A13 /* SwiftNonStandardLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE813A1C1947FCBA00945504 /* SwiftNonStandardLibrary_iOS.framework in Frameworks */,
+				CE5C4089195BB84A00EB3A13 /* SwiftNonStandardLibrary_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +329,9 @@
 				CEF03960195BB45100D4D491 /* OSSExceptionHelper.m */,
 				CEF03961195BB45100D4D491 /* Sequences.swift */,
 				CEF03962195BB45100D4D491 /* Tuples.swift */,
+				CEEE970B195D051600914127 /* Threading.swift */,
+				CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */,
+				CEEE9711195D0BFF00914127 /* ThreadingTrampolines.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -326,6 +345,7 @@
 			files = (
 				CEF03973195BB45100D4D491 /* OSSExceptionHelper.h in Headers */,
 				CEF03981195BB59F00D4D491 /* SwiftNonStandardLibrary.h in Headers */,
+				CEEE970F195D0B9900914127 /* ThreadingTrampolines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +355,7 @@
 			files = (
 				CEF03974195BB45100D4D491 /* OSSExceptionHelper.h in Headers */,
 				CE813A161947FCBA00945504 /* SwiftNonStandardLibrary_iOS.h in Headers */,
+				CEEE9710195D0B9A00914127 /* ThreadingTrampolines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +400,8 @@
 				CE813A7819480A7300945504 /* PBXTargetDependency */,
 				CE076DBD19494036004E108B /* PBXTargetDependency */,
 				CE5C4086195BB7B100EB3A13 /* PBXTargetDependency */,
+				CE5C4088195BB7B100EB3A13 /* PBXTargetDependency */,
+				CE5C408E195BB84F00EB3A13 /* PBXTargetDependency */,
 			);
 			name = SwiftNonStandardLibraryTests;
 			productName = SwiftNonStandardLibraryTests;
@@ -419,6 +442,7 @@
 				CE813A2D1947FCBB00945504 /* PBXTargetDependency */,
 				CE813A2F1947FCBC00945504 /* PBXTargetDependency */,
 				CE813A441947FE9500945504 /* PBXTargetDependency */,
+				CE5C408B195BB84A00EB3A13 /* PBXTargetDependency */,
 			);
 			name = SwiftNonStandardLibrary_iOSTests;
 			productName = SwiftNonStandardLibrary_iOSTests;
@@ -506,11 +530,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEE970C195D051600914127 /* Threading.swift in Sources */,
 				CEF0396B195BB45100D4D491 /* GCD.swift in Sources */,
 				CEF03963195BB45100D4D491 /* Console.swift in Sources */,
 				CEF03979195BB45100D4D491 /* Sequences.swift in Sources */,
 				CEF0396F195BB45100D4D491 /* main.swift in Sources */,
 				CEF03967195BB45100D4D491 /* Exceptions.swift in Sources */,
+				CEEE9712195D0BFF00914127 /* ThreadingTrampolines.m in Sources */,
 				CEF0397D195BB45100D4D491 /* Tuples.swift in Sources */,
 				CEF03975195BB45100D4D491 /* OSSExceptionHelper.m in Sources */,
 			);
@@ -521,13 +547,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE813A031947FC4400945504 /* SwiftNonStandardLibraryTests.swift in Sources */,
-				CEF03976195BB45100D4D491 /* OSSExceptionHelper.m in Sources */,
-				CEF03970195BB45100D4D491 /* main.swift in Sources */,
-				CEF03968195BB45100D4D491 /* Exceptions.swift in Sources */,
-				CEF0397E195BB45100D4D491 /* Tuples.swift in Sources */,
-				CEF0397A195BB45100D4D491 /* Sequences.swift in Sources */,
-				CEF0396C195BB45100D4D491 /* GCD.swift in Sources */,
-				CEF03964195BB45100D4D491 /* Console.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,11 +554,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEE970D195D051600914127 /* Threading.swift in Sources */,
 				CEF0396D195BB45100D4D491 /* GCD.swift in Sources */,
 				CEF03965195BB45100D4D491 /* Console.swift in Sources */,
 				CEF0397B195BB45100D4D491 /* Sequences.swift in Sources */,
 				CEF03971195BB45100D4D491 /* main.swift in Sources */,
 				CEF03969195BB45100D4D491 /* Exceptions.swift in Sources */,
+				CEEE9713195D0BFF00914127 /* ThreadingTrampolines.m in Sources */,
 				CEF0397F195BB45100D4D491 /* Tuples.swift in Sources */,
 				CEF03977195BB45100D4D491 /* OSSExceptionHelper.m in Sources */,
 			);
@@ -550,13 +571,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE813A231947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift in Sources */,
-				CEF03978195BB45100D4D491 /* OSSExceptionHelper.m in Sources */,
-				CEF03972195BB45100D4D491 /* main.swift in Sources */,
-				CEF0396A195BB45100D4D491 /* Exceptions.swift in Sources */,
-				CEF03980195BB45100D4D491 /* Tuples.swift in Sources */,
-				CEF0397C195BB45100D4D491 /* Sequences.swift in Sources */,
-				CEF0396E195BB45100D4D491 /* GCD.swift in Sources */,
-				CEF03966195BB45100D4D491 /* Console.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +586,21 @@
 			isa = PBXTargetDependency;
 			target = CE8139EF1947FC4400945504 /* SwiftNonStandardLibrary */;
 			targetProxy = CE5C4085195BB7B100EB3A13 /* PBXContainerItemProxy */;
+		};
+		CE5C4088195BB7B100EB3A13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE8139EF1947FC4400945504 /* SwiftNonStandardLibrary */;
+			targetProxy = CE5C4087195BB7B100EB3A13 /* PBXContainerItemProxy */;
+		};
+		CE5C408B195BB84A00EB3A13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE813A101947FCBA00945504 /* SwiftNonStandardLibrary_iOS */;
+			targetProxy = CE5C408A195BB84A00EB3A13 /* PBXContainerItemProxy */;
+		};
+		CE5C408E195BB84F00EB3A13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE8139EF1947FC4400945504 /* SwiftNonStandardLibrary */;
+			targetProxy = CE5C408D195BB84F00EB3A13 /* PBXContainerItemProxy */;
 		};
 		CE8139FE1947FC4400945504 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
