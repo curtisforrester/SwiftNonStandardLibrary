@@ -43,6 +43,16 @@ class ThreadLocalSlot<T:AnyObject> {
     }
     
     var value: T? {
+        get {
+            let ptr = pthread_getspecific(key)
+            if ptr != nil {
+                let unmanaged:Unmanaged<T> = Unmanaged.fromOpaque(ptr)
+                //return unretained value so we dont change retain count
+                return unmanaged.takeUnretainedValue()
+            }
+            
+            return nil
+        }
         set {
             //grab old value so we can clean it up
             let oldPtr = pthread_getspecific(key)
@@ -62,16 +72,9 @@ class ThreadLocalSlot<T:AnyObject> {
                 unmanaged.release() //balance out the retain we did when originally set
             }
         }
-        get {
-            let ptr = pthread_getspecific(key)
-            if ptr != nil {
-                let unmanaged:Unmanaged<T> = Unmanaged.fromOpaque(ptr)
-                //return unretained value so we dont change retain count
-                return unmanaged.takeUnretainedValue()
-            }
-            
-            return nil
-        }
     }
 }
 
+class QueueLocalSlot<T:AnyObject> {
+    
+}

@@ -85,6 +85,7 @@ class SwiftNonStandardLibraryTests: XCTestCase {
         XCTAssert(didTry && didCatch && didFinally, "try, catch, or finally must execute")
     }
     
+    //TODO: Uncomment these tests when the compiler is fixed
     func testJoinSequences() {
 //        let result = seq1.outerJoin(seq2, key:{ $0.field1 }, { (leftObj: $0, joinedObj: $1, keyValue: $2) })
 //        let r2 = seq1.filter({ $0.field2 % 2 == 0 })
@@ -98,7 +99,7 @@ class SwiftNonStandardLibraryTests: XCTestCase {
 //        }
     }
     
-    
+    //TODO: Uncomment these tests when the compiler is fixed
     func testGroupBySequences() {
 //        //first, do grouping the old fashioned way
 //        var oldSchoolCounts: Dictionary<String, Int> = Dictionary()
@@ -146,20 +147,30 @@ class SwiftNonStandardLibraryTests: XCTestCase {
         XCTAssert(s.value == "592", "slot must have expected value")
     }
     
+    func testThreadLocalSlotSingleSwiftObject() {
+        let s:ThreadLocalSlot<NonObjcCompatibleObject<Int>> = ThreadLocalSlot()
+        s.value = NonObjcCompatibleObject(v: 5)
+        
+        XCTAssert(s.value?.xyz[0] == 5, "slot expects non-objc object with xyz == 5")
+    }
+    
     func testThreadLocalSlotGCD() {
         let x:ThreadLocalSlot<NSString> = ThreadLocalSlot()
         let myqueue = dispatch_queue_create("com.obsolete-software.testQueue", DISPATCH_QUEUE_CONCURRENT)
         
         x.value = "main"
         var count = 0
-        for var i = 0; i < 100; i++ {
+        var completeCount = UnsafePointer<Int32>.alloc(sizeof(Int32))
+        completeCount.initialize(0)
+        
+        for var i = 0; i < 50; i++ {
             dispatch_async(myqueue) {
                 let myStr = "op \(count++)"
                 x.value = myStr
                 for var v = 0; v < 500; v++ {
                     XCTAssert(x.value == myStr, "operation must have expected value not in conflict with other operations")
                 }
-                
+                OSAtomicIncrement32(completeCount)
             }
         }
         
@@ -167,10 +178,30 @@ class SwiftNonStandardLibraryTests: XCTestCase {
             //wait for the queued blocks to complete
         }
         
+        XCTAssert(completeCount.memory == 50, "expected 50 queued bocks to complete")
         
         XCTAssert(x.value == "main", "slot has expected value after all operations finished")
+        
+        completeCount.dealloc(sizeof(Int32))
     }
     
+    func testQueueContext() {
+        let queue = Queue(label: "com.obsolete-software.testQueue.context", kind: .Concurrent)
+        queue.context = "an object"
+        XCTAssert(queue.context as String == "an object", "queue context object is string")
+        
+        queue.context = DataHolder("ok", 42)
+        let d = queue.context as DataHolder
+        XCTAssert(d.field1 == "ok" && d.field2 == 42, "queue context object is a valid object that lived")
+    }
+    
+}
+
+class NonObjcCompatibleObject<T> {
+    var xyz:T[]
+    init(v:T) {
+        xyz = [v]
+    }
 }
 
 class DataHolder {

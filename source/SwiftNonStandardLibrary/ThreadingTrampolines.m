@@ -29,3 +29,28 @@ pthread_key_t oss_pthread_createKey() {
     }
     return key;
 }
+
+void oss_dispatch_cleanup_queue(void * value)
+{
+    if(value != NULL) {
+        CFBridgingRelease(value);
+    }
+}
+
+void oss_dispatch_set_finalizer_f(dispatch_queue_t queue)
+{
+    dispatch_set_finalizer_f(queue, &oss_dispatch_cleanup_queue);
+}
+
+
+
+void oss_dispatch_cleanup_specific(void *value)
+{
+    
+}
+
+
+id oss_void_pointer_to_object_unretained(void *ptr)
+{
+    return (__bridge id)ptr;
+}
