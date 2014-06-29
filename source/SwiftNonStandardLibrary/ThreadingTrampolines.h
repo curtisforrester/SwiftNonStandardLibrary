@@ -22,16 +22,15 @@ void oss_dispatch_cleanup_queue(void *value);
 void oss_dispatch_set_finalizer_f(dispatch_queue_t queue);
 
 
-/*!  */
-void oss_dispatch_cleanup_specific(void *value);
+/*! Release any specific object associated with a queue-specific key */
+void oss_dispatch_queue_cleanup_specific(void *value);
+/*! Set queue specific value by key; Swift can't import this because it has a C function pointer */
+void oss_dispatch_queue_set_specific(dispatch_queue_t queue, const void *key, void *obj);
 
 
-/*! Work around a Swift bug that prevents retrieving an unmanaged object in some cases */
+/*! Work around a Swift bug that prevents retrieving an unmanaged object in some cases rdar://17492202 */
 id oss_void_pointer_to_object_unretained(void *ptr);
 
-//void
-//dispatch_queue_set_specific(dispatch_queue_t queue, const void *key,
-//                            void *context, dispatch_function_t destructor);
 
 
 //Note: Swift won't import our C functions unless we fake it with a .h and .m, at least for now.

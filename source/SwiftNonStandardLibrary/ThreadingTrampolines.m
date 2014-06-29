@@ -43,10 +43,16 @@ void oss_dispatch_set_finalizer_f(dispatch_queue_t queue)
 }
 
 
-
-void oss_dispatch_cleanup_specific(void *value)
+void oss_dispatch_queue_cleanup_specific(void *value)
 {
-    
+    if(value != NULL) {
+        CFBridgingRelease(value);
+    }
+}
+
+void oss_dispatch_queue_set_specific(dispatch_queue_t queue, const void *key, void *obj)
+{
+    dispatch_queue_set_specific(queue, key, obj, &oss_dispatch_queue_cleanup_specific);
 }
 
 
