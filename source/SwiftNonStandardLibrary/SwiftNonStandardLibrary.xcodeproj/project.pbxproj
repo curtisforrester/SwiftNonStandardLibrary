@@ -18,6 +18,8 @@
 		CE813A031947FC4400945504 /* SwiftNonStandardLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE813A021947FC4400945504 /* SwiftNonStandardLibraryTests.swift */; };
 		CE813A161947FCBA00945504 /* SwiftNonStandardLibrary_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CE813A151947FCBA00945504 /* SwiftNonStandardLibrary_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE813A231947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE813A221947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift */; };
+		CE8F29EC196122F1006181EE /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F29EB196122F1006181EE /* Box.swift */; };
+		CE8F29ED196122F1006181EE /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F29EB196122F1006181EE /* Box.swift */; };
 		CEEE970C195D051600914127 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE970B195D051600914127 /* Threading.swift */; };
 		CEEE970D195D051600914127 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE970B195D051600914127 /* Threading.swift */; };
 		CEEE970F195D0B9900914127 /* ThreadingTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */; };
@@ -41,6 +43,8 @@
 		CEF0397D195BB45100D4D491 /* Tuples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF03962195BB45100D4D491 /* Tuples.swift */; };
 		CEF0397F195BB45100D4D491 /* Tuples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF03962195BB45100D4D491 /* Tuples.swift */; };
 		CEF03981195BB59F00D4D491 /* SwiftNonStandardLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = CE8139F51947FC4400945504 /* SwiftNonStandardLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEF6CE651964262600948EA6 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6CE641964262600948EA6 /* Atomic.swift */; };
+		CEF6CE661964262600948EA6 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6CE641964262600948EA6 /* Atomic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +186,7 @@
 		CE813A221947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNonStandardLibrary_iOSTests.swift; sourceTree = "<group>"; };
 		CE813A451947FF9A00945504 /* swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE813A461947FFB200945504 /* swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		CE8F29EB196122F1006181EE /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		CEEE970B195D051600914127 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
 		CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadingTrampolines.h; sourceTree = "<group>"; };
 		CEEE9711195D0BFF00914127 /* ThreadingTrampolines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadingTrampolines.m; sourceTree = "<group>"; };
@@ -195,6 +200,7 @@
 		CEF03960195BB45100D4D491 /* OSSExceptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSExceptionHelper.m; sourceTree = "<group>"; };
 		CEF03961195BB45100D4D491 /* Sequences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequences.swift; sourceTree = "<group>"; };
 		CEF03962195BB45100D4D491 /* Tuples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuples.swift; sourceTree = "<group>"; };
+		CEF6CE641964262600948EA6 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,19 +335,21 @@
 		CE813A301947FCEB00945504 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CEF6CE641964262600948EA6 /* Atomic.swift */,
+				CE8F29EB196122F1006181EE /* Box.swift */,
 				CEF0395B195BB45100D4D491 /* Console.swift */,
 				CEF0395C195BB45100D4D491 /* Exceptions.swift */,
 				CEF0395D195BB45100D4D491 /* GCD.swift */,
+				CE05527B195F127D00C94A79 /* Interop.swift */,
 				CEF0395E195BB45100D4D491 /* main.swift */,
+				CE05527E195F244400C94A79 /* Optionals.swift */,
 				CEF0395F195BB45100D4D491 /* OSSExceptionHelper.h */,
 				CEF03960195BB45100D4D491 /* OSSExceptionHelper.m */,
 				CEF03961195BB45100D4D491 /* Sequences.swift */,
-				CEF03962195BB45100D4D491 /* Tuples.swift */,
 				CEEE970B195D051600914127 /* Threading.swift */,
 				CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */,
 				CEEE9711195D0BFF00914127 /* ThreadingTrampolines.m */,
-				CE05527B195F127D00C94A79 /* Interop.swift */,
-				CE05527E195F244400C94A79 /* Optionals.swift */,
+				CEF03962195BB45100D4D491 /* Tuples.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -546,11 +554,13 @@
 				CEF0396B195BB45100D4D491 /* GCD.swift in Sources */,
 				CEF03963195BB45100D4D491 /* Console.swift in Sources */,
 				CEF03979195BB45100D4D491 /* Sequences.swift in Sources */,
+				CEF6CE651964262600948EA6 /* Atomic.swift in Sources */,
 				CEF0396F195BB45100D4D491 /* main.swift in Sources */,
 				CEF03967195BB45100D4D491 /* Exceptions.swift in Sources */,
 				CEEE9712195D0BFF00914127 /* ThreadingTrampolines.m in Sources */,
 				CE05527C195F127D00C94A79 /* Interop.swift in Sources */,
 				CEF0397D195BB45100D4D491 /* Tuples.swift in Sources */,
+				CE8F29EC196122F1006181EE /* Box.swift in Sources */,
 				CE05527F195F244400C94A79 /* Optionals.swift in Sources */,
 				CEF03975195BB45100D4D491 /* OSSExceptionHelper.m in Sources */,
 			);
@@ -572,11 +582,13 @@
 				CEF0396D195BB45100D4D491 /* GCD.swift in Sources */,
 				CEF03965195BB45100D4D491 /* Console.swift in Sources */,
 				CEF0397B195BB45100D4D491 /* Sequences.swift in Sources */,
+				CEF6CE661964262600948EA6 /* Atomic.swift in Sources */,
 				CEF03971195BB45100D4D491 /* main.swift in Sources */,
 				CEF03969195BB45100D4D491 /* Exceptions.swift in Sources */,
 				CEEE9713195D0BFF00914127 /* ThreadingTrampolines.m in Sources */,
 				CE05527D195F127D00C94A79 /* Interop.swift in Sources */,
 				CEF0397F195BB45100D4D491 /* Tuples.swift in Sources */,
+				CE8F29ED196122F1006181EE /* Box.swift in Sources */,
 				CE055280195F244400C94A79 /* Optionals.swift in Sources */,
 				CEF03977195BB45100D4D491 /* OSSExceptionHelper.m in Sources */,
 			);

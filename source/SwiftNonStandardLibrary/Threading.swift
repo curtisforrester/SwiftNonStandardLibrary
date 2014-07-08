@@ -75,6 +75,3 @@ class ThreadLocalSlot<T:AnyObject> {
     }
 }
 
-class QueueLocalSlot<T:AnyObject> {
-    
-}

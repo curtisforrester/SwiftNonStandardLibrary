@@ -49,7 +49,7 @@ extension SequenceOf {
     }
     
     ///Filter elements of a sequence
-    func filter(filter: T->Bool) -> SequenceOf<T> {
+    func filter(filter: (T)->Bool) -> SequenceOf<T> {
         return SequenceOf<T> { ()->GeneratorOf<T> in
             var generator = self.generate()
             return GeneratorOf<T> {
@@ -95,6 +95,7 @@ extension SequenceOf {
                 }
             }
     }
+    
     
     ///Perform an outer join of elements in this sequence, matching elements in the target sequence of the same type on the given key and projecting the desired result
     func outerJoin<TKey:Hashable, ResultType>(inner:SequenceOf<T>, key:(T)->TKey, result:(T,T, TKey)->ResultType) -> SequenceOf<ResultType> {
