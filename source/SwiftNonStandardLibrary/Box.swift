@@ -12,7 +12,7 @@ import Foundation
 
 class Box<T> {
     //array to work around compiler bug about "unimplemented IR generation feature non-fixed class layout"
-    var _value: T[]
+    var _value: [T]
     
     init(_ value:T) {
         _value = [value]

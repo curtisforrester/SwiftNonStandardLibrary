@@ -30,6 +30,6 @@ func readln(max:Int = 8192) -> String? {
     
     //always null terminate
     buf += CChar(0)
-    
-    return buf.withUnsafePointerToElements { String.fromCString($0) }
+
+    return buf.withUnsafePointerToElements { String.fromCString(CString($0)) }
 }

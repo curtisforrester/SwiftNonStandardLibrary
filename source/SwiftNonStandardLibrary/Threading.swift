@@ -46,7 +46,7 @@ class ThreadLocalSlot<T:AnyObject> {
         get {
             let ptr = pthread_getspecific(key)
             if ptr != nil {
-                let unmanaged:Unmanaged<T> = Unmanaged.fromOpaque(ptr)
+                let unmanaged = Unmanaged<T>.fromUnsafePtr(ptr)
                 //return unretained value so we dont change retain count
                 return unmanaged.takeUnretainedValue()
             }
@@ -61,14 +61,14 @@ class ThreadLocalSlot<T:AnyObject> {
             //we are responsible for eventually releasing somewhere
             if newValue {
                 let ptr = Unmanaged.passRetained(newValue!)
-                pthread_setspecific(key, ptr.toOpaque())
+                pthread_setspecific(key, ConstUnsafePointer<()>(ptr.toOpaque()))
             } else {
                 pthread_setspecific(key, nil)
             }
             
             //cleanup the old value
             if oldPtr != nil {
-                let unmanaged:Unmanaged<T> = Unmanaged.fromOpaque(oldPtr)
+                let unmanaged:Unmanaged<T> = Unmanaged.fromOpaque(COpaquePointer(oldPtr))
                 unmanaged.release() //balance out the retain we did when originally set
             }
         }

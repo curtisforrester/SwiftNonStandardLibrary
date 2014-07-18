@@ -27,7 +27,7 @@ enum QueueKind {
 ///A GCD Queue for scheduling closures to execute
 class Queue {
     let _queue:dispatch_queue_t
-    var _keys:Dictionary<String, CConstVoidPointer> = [:]
+    var _keys:Dictionary<String, UnsafePointer<()>> = [:]
     
     init(_ label:String, _ kind:QueueKind) {
         _queue = label.withCString { dispatch_queue_create($0, kind.toKind()) }
@@ -35,7 +35,11 @@ class Queue {
     }
     
     deinit {
-        //I think the queue will be released automatically, but need to confirm
+        for (key, value) in _keys {
+            value.dealloc(1)
+        }
+        
+        dispatch_release(_queue)
     }
     
     ///A context object associated with the queue
@@ -64,10 +68,10 @@ class Queue {
         setObjectAtPointer(value, dispatch_get_specific(keyPointer), { oss_dispatch_queue_set_specific(self._queue, keyPointer, $0) })
     }
     
-    func ptrForKey(key:String)->CConstVoidPointer {
+    func ptrForKey(key:String)->UnsafePointer<()> {
         var result = _keys[key]
         if !result {
-            result = result.valueOrDefault(UnsafePointer<Int>.alloc(sizeof(Int)))
+            result = result.valueOrDefault(UnsafePointer<Int>.alloc(1))
             _keys[key] = result
         }
         return result!

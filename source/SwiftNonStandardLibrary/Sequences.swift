@@ -118,7 +118,7 @@ extension SequenceOf {
                 let keyValue = key(item)
                 if let k = keyValue {
                     var groupInfo = groups[k]
-                    if groupInfo == nil {
+                    if !groupInfo {
                         groupInfo = GroupByGroup(key: k)
                         groups[k] = groupInfo
                     }
@@ -141,12 +141,12 @@ extension SequenceOf {
     }
     
     ///Converts the sequence to an array
-    func toArray() -> T[] {
+    func toArray() -> [T] {
         return Array(self)
     }
     
     ///Converts the sequence to an array, transforming each element of the sequence to the desired value
-    func toArray<TResult>(transform:T->TResult) -> TResult[] {
+    func toArray<TResult>(transform:T->TResult) -> [TResult] {
         return Array(self.select(transform))
     }
     
@@ -168,8 +168,8 @@ extension SequenceOf {
 
 
 class GroupByGroup<TKey, TResult> {
-    var key:TKey[]
-    var items:TResult[]
+    var key:[TKey]
+    var items:[TResult]
 
     init(key:TKey) {
         self.key = [key]
