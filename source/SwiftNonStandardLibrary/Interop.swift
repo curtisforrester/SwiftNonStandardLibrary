@@ -64,6 +64,95 @@ extension Unmanaged {
     }
 }
 
+extension UnsafePointer {
+    ///Writes value to the pointer, optionally repeating repeatCount times.
+    ///All use of this function is unsafe and should be reviewed thoroughly
+    func write(value:CChar, repeatCount:UInt = 1) {
+        self.write(value, startOffset: 0, repeatCount: repeatCount)
+    }
+    
+    ///Writes value to the pointer, optionally starting at the given offset and repeating for repeatCount.
+    ///All use of this function is unsafe and should be reviewed thoroughly
+    func write(value:CChar, startOffset:Int = 0, repeatCount:UInt = 1) {
+        memset(UnsafePointer<()>(self + startOffset), Int32(UInt8(value)), repeatCount)
+    }
+    
+    ///Initializes the memory pointed to by UnsafePointer to zero.
+    ///num should be the number of objects of T (same as alloc()).
+    ///Passing a larger size will stomp on memory and represents a potentially significant security risk;
+    ///All use of this function is unsafe and should be reviewed thoroughly
+    func initializeZero(num:Int) {
+        self.write(0, startOffset:0, repeatCount:UInt(num))
+    }
+}
 
+extension String {
+    ///Converts from a null-terminated vector of CChar (or Int8)
+    static func fromCString(buf:UnsafePointer<CChar>) -> String? {
+        return String.fromCString(CString(buf))
+    }
+    
+    ///Converts from a null-terminated vector of UInt8
+    static func fromCString(buf:UnsafePointer<UInt8>) -> String? {
+        return String.fromCString(CString(buf))
+    }
+}
+
+///Represents a vector of CChar, null-terminated, with automatic conversion to String.
+///Useful for APIs that want a pointer to write a string result, allowing you to specify the
+///max size of the allocation.
+///
+///This class is initialized to be filled with null, so absent any writes it is always safe to
+///use description or convert to String.
+///
+///Warning: Writes are always responsible for ensuring the terminating null is present!
+class StringBuffer : Printable {
+    var length:Int
+    var buffer:UnsafePointer<CChar>
+    init(_ capacity:Int) {
+        assert(capacity > 0, "capacity must be > 0")
+        //We lie and allocate +1 to include one last null as a safety check to prevent buffer
+        //overruns when converting back to String, since that conversion is potentially
+        //automatic and/or implicit. Users of this class should *NOT* assume that behavior will
+        //continue!
+        //ALWAYS VERIFY YOUR USE OF POINTERS IS CORRECT, DO NOT RELY ON IMPLEMENTATION DETAILS
+        self.length = capacity + 1
+        self.buffer = UnsafePointer.alloc(self.length)
+        self.buffer.initializeZero(self.length)
+    }
+    convenience init(_ capacity:Int32) {
+        self.init(Int(capacity))
+    }
+    deinit {
+        self.buffer.dealloc(self.length)
+    }
+    @conversion func __conversion() -> String? {
+        return String.fromCString(self.buffer)
+    }
+    @conversion func __conversion<T>() -> UnsafePointer<T> {
+        return UnsafePointer<T>(self.buffer)
+    }
+    var description: String {
+    get {
+        let s = self as String?
+        if let ss = s {
+            return ss
+        } else {
+            return "[empty StringBuffer]"
+        }
+    }
+    }
+    var ulength: UInt {
+    get {
+        return UInt(self.length)
+    }
+    }
+    var ulength32: UInt32 {
+    get {
+        assert(UInt64(self.length) < UInt64(Int32.max), "too big")
+        return UInt32(self.length)
+    }
+    }
+}
 
 
