@@ -20,6 +20,8 @@
 		CE813A231947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE813A221947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift */; };
 		CE8F29EC196122F1006181EE /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F29EB196122F1006181EE /* Box.swift */; };
 		CE8F29ED196122F1006181EE /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F29EB196122F1006181EE /* Box.swift */; };
+		CE924F46197B7E520058E91B /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE924F45197B7E520058E91B /* Net.swift */; };
+		CE924F47197B7E520058E91B /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE924F45197B7E520058E91B /* Net.swift */; };
 		CEEE970C195D051600914127 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE970B195D051600914127 /* Threading.swift */; };
 		CEEE970D195D051600914127 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE970B195D051600914127 /* Threading.swift */; };
 		CEEE970F195D0B9900914127 /* ThreadingTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */; };
@@ -187,6 +189,7 @@
 		CE813A451947FF9A00945504 /* swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE813A461947FFB200945504 /* swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE8F29EB196122F1006181EE /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		CE924F45197B7E520058E91B /* Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
 		CEEE970B195D051600914127 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
 		CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadingTrampolines.h; sourceTree = "<group>"; };
 		CEEE9711195D0BFF00914127 /* ThreadingTrampolines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadingTrampolines.m; sourceTree = "<group>"; };
@@ -350,6 +353,7 @@
 				CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */,
 				CEEE9711195D0BFF00914127 /* ThreadingTrampolines.m */,
 				CEF03962195BB45100D4D491 /* Tuples.swift */,
+				CE924F45197B7E520058E91B /* Net.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -563,6 +567,7 @@
 				CE8F29EC196122F1006181EE /* Box.swift in Sources */,
 				CE05527F195F244400C94A79 /* Optionals.swift in Sources */,
 				CEF03975195BB45100D4D491 /* OSSExceptionHelper.m in Sources */,
+				CE924F46197B7E520058E91B /* Net.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +596,7 @@
 				CE8F29ED196122F1006181EE /* Box.swift in Sources */,
 				CE055280195F244400C94A79 /* Optionals.swift in Sources */,
 				CEF03977195BB45100D4D491 /* OSSExceptionHelper.m in Sources */,
+				CE924F47197B7E520058E91B /* Net.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
