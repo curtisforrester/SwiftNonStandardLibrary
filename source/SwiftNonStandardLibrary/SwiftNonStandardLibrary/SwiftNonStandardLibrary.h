@@ -19,3 +19,6 @@ FOUNDATION_EXPORT const unsigned char SwiftNonStandardLibraryVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <SwiftNonStandardLibrary/PublicHeader.h>
 
 //#import <SwiftNonStandardLibrary/OSSExceptionHelper.h>
+
+#import "OSSExceptionHelper.h"
+#import "ThreadingTrampolines.h"

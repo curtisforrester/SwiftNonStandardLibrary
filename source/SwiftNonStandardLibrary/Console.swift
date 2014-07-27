@@ -16,7 +16,7 @@ import Foundation
 ///
 ///@return
 /// the string, or nil if an error was encountered trying to read Stdin
-func readln(max:Int = 8192) -> String? {
+public func readln(max:Int = 8192) -> String? {
     var buf:Array<CChar> = []
     var c = getchar()
     let maxBuf = max - 1;
@@ -31,5 +31,5 @@ func readln(max:Int = 8192) -> String? {
     //always null terminate
     buf += CChar(0)
 
-    return buf.withUnsafePointerToElements { String.fromCString(CString($0)) }
+    return buf.withUnsafePointerToElements { String.fromCString($0) }
 }

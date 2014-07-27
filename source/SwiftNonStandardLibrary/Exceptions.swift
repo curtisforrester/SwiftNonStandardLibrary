@@ -24,7 +24,7 @@ import Foundation
 /// }, finally: {
 ///  //cleanup
 /// })}
-func try(maker: ()->(()->(), catch:((NSException!)->())?, finally:(()->())? )) {
+public func try(maker: ()->(()->(), catch:((NSException!)->())?, finally:(()->())? )) {
     let (action, catch, finally) = maker()
     OSSExceptionHelper.tryInvokeBlock(action, catch, finally)
 }
@@ -45,7 +45,7 @@ func try(maker: ()->(()->(), catch:((NSException!)->())?, finally:(()->())? )) {
 /// }, finally: {
 ///  //cleanup
 /// })}
-func try<T: AnyObject>(maker: ()->( ()->T, catch:((NSException!)->())?, finally: (()->())? )) -> T? {
+public func try<T: AnyObject>(maker: ()->( ()->T, catch:((NSException!)->())?, finally: (()->())? )) -> T? {
     let (action, catch, finally) = maker()
     let result : AnyObject! = OSSExceptionHelper.tryInvokeBlockWithReturn(action, catch: { ex in
         if let catchClause = catch {
@@ -77,7 +77,7 @@ func try<T: AnyObject>(maker: ()->( ()->T, catch:((NSException!)->())?, finally:
 /// }, finally: {
 ///  //cleanup
 /// })}
-func try<T: AnyObject>(maker: ()->( ()->T, catch:((NSException!)->T)?, finally: (()->())? )) -> T? {
+public func try<T: AnyObject>(maker: ()->( ()->T, catch:((NSException!)->T)?, finally: (()->())? )) -> T? {
     let (action, catch, finally) = maker()
     let result : AnyObject! = OSSExceptionHelper.tryInvokeBlockWithReturn(action, catch: catch, finally: finally)
     if result {
@@ -88,11 +88,11 @@ func try<T: AnyObject>(maker: ()->( ()->T, catch:((NSException!)->T)?, finally: 
 }
 
 ///Throws an NSException. This must be in the context of try() or your program will abort since Swift does not handle exceptions natively
-func throw(name:String, message:String) {
+public func throw(name:String, message:String) {
     OSSExceptionHelper.throwExceptionNamed(name, message: message)
 }
 
 ///Throws an NSException. This must be in the context of try() or your program will abort since Swift does not handle exceptions natively
-func throw(ex:NSException) {
+public func throw(ex:NSException) {
     OSSExceptionHelper.throwException(ex)
 }

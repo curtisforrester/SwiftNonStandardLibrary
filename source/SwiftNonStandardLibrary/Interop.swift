@@ -46,12 +46,12 @@ func setObjectAtPointer<T:AnyObject>(newValue:T?, ptrGetter: @auto_closure ()->U
 }
 
 
-extension Unmanaged {
+public extension Unmanaged {
     ///Creates an UnsafePointer<()> to the object.
     ///Be sure you have taken the appropriate retain steps to keep the object alive
     ///before passing the pointer anywhere, or the object may be released and deallocated
     ///out from underneath you, leaving a dangling pointer!
-    func toUnsafePtr() -> UnsafePointer<()> {
+    public func toUnsafePtr() -> UnsafePointer<()> {
         return UnsafePointer<()>(self.toOpaque())
     }
     
@@ -59,21 +59,21 @@ extension Unmanaged {
     ///No retains/releases are performed, so be sure you manage object lifetimes properly.
     ///Passing an invalid pointer or a pointer of the wrong type is
     ///undefined behavior.
-    static func fromUnsafePtr(unsafe: UnsafePointer<()>) -> Unmanaged<T> {
+    static public func fromUnsafePtr(unsafe: UnsafePointer<()>) -> Unmanaged<T> {
         return Unmanaged<T>.fromOpaque(COpaquePointer(unsafe))
     }
 }
 
-extension UnsafePointer {
+public extension UnsafePointer {
     ///Writes value to the pointer, optionally repeating repeatCount times.
     ///All use of this function is unsafe and should be reviewed thoroughly
-    func write(value:CChar, repeatCount:UInt = 1) {
+    public func write(value:CChar, repeatCount:UInt = 1) {
         self.write(value, startOffset: 0, repeatCount: repeatCount)
     }
     
     ///Writes value to the pointer, optionally starting at the given offset and repeating for repeatCount.
     ///All use of this function is unsafe and should be reviewed thoroughly
-    func write(value:CChar, startOffset:Int = 0, repeatCount:UInt = 1) {
+    public func write(value:CChar, startOffset:Int = 0, repeatCount:UInt = 1) {
         memset(UnsafePointer<()>(self + startOffset), Int32(UInt8(value)), repeatCount)
     }
     
@@ -81,20 +81,8 @@ extension UnsafePointer {
     ///num should be the number of objects of T (same as alloc()).
     ///Passing a larger size will stomp on memory and represents a potentially significant security risk;
     ///All use of this function is unsafe and should be reviewed thoroughly
-    func initializeZero(num:Int) {
+    public func initializeZero(num:Int) {
         self.write(0, startOffset:0, repeatCount:UInt(num))
-    }
-}
-
-extension String {
-    ///Converts from a null-terminated vector of CChar (or Int8)
-    static func fromCString(buf:UnsafePointer<CChar>) -> String? {
-        return String.fromCString(CString(buf))
-    }
-    
-    ///Converts from a null-terminated vector of UInt8
-    static func fromCString(buf:UnsafePointer<UInt8>) -> String? {
-        return String.fromCString(CString(buf))
     }
 }
 
@@ -106,10 +94,10 @@ extension String {
 ///use description or convert to String.
 ///
 ///Warning: Writes are always responsible for ensuring the terminating null is present!
-class StringBuffer : Printable {
+public class StringBuffer : Printable {
     var length:Int
     var buffer:UnsafePointer<CChar>
-    init(_ capacity:Int) {
+    public init(_ capacity:Int) {
         assert(capacity > 0, "capacity must be > 0")
         //We lie and allocate +1 to include one last null as a safety check to prevent buffer
         //overruns when converting back to String, since that conversion is potentially
@@ -120,19 +108,19 @@ class StringBuffer : Printable {
         self.buffer = UnsafePointer.alloc(self.length)
         self.buffer.initializeZero(self.length)
     }
-    convenience init(_ capacity:Int32) {
+    public convenience init(_ capacity:Int32) {
         self.init(Int(capacity))
     }
     deinit {
         self.buffer.dealloc(self.length)
     }
-    @conversion func __conversion() -> String? {
+    public func __conversion() -> String? {
         return String.fromCString(self.buffer)
     }
-    @conversion func __conversion<T>() -> UnsafePointer<T> {
+    public func __conversion<T>() -> UnsafePointer<T> {
         return UnsafePointer<T>(self.buffer)
     }
-    var description: String {
+    public var description: String {
     get {
         let s = self as String?
         if let ss = s {
@@ -142,12 +130,12 @@ class StringBuffer : Printable {
         }
     }
     }
-    var ulength: UInt {
+    public var ulength: UInt {
     get {
         return UInt(self.length)
     }
     }
-    var ulength32: UInt32 {
+    public var ulength32: UInt32 {
     get {
         assert(UInt64(self.length) < UInt64(Int32.max), "too big")
         return UInt32(self.length)

@@ -10,38 +10,31 @@
 
 import Foundation
 
-class Box<T> {
-    //array to work around compiler bug about "unimplemented IR generation feature non-fixed class layout"
-    var _value: [T]
+public class Box<T> {
+    var _value: T
     
-    init(_ value:T) {
-        _value = [value]
+    public init(_ value:T) {
+        _value = value
     }
     
-    var value:T {
+    public var value:T {
     get {
-        return _value[0]
+        return _value
     }
     }
     
-    @conversion func __conversion() -> T {
+    public func __conversion() -> T {
         return value
     }
 }
 
-class MutableBox<T> : Box<T> {
-    //array to work around compiler bug about "unimplemented IR generation feature non-fixed class layout"
-    
-//    init(_ value:T) {
-//        super.init(value)
-//    }
-    
-    override var value:T {
+public class MutableBox<T> : Box<T> {
+    override public var value:T {
     get {
-        return _value[0]
+        return _value
     }
     set {
-        _value[0] = newValue
+        _value = newValue
     }
     }
 }

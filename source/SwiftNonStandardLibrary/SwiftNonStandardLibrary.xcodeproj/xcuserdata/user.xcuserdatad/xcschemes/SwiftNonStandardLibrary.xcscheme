@@ -50,6 +50,15 @@
       debugDocumentVersioning = "YES"
       debugXPCServices = "NO"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CE8139EF1947FC4400945504"
+            BuildableName = "SwiftNonStandardLibrary.framework"
+            BlueprintName = "SwiftNonStandardLibrary"
+            ReferencedContainer = "container:SwiftNonStandardLibrary.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

@@ -19,3 +19,5 @@ FOUNDATION_EXPORT const unsigned char SwiftNonStandardLibrary_iOSVersionString[]
 
 
 //#import <SwiftNonStandardLibrary/OSSExceptionHelper.h>
+#import "OSSExceptionHelper.h"
+#import "ThreadingTrampolines.h"

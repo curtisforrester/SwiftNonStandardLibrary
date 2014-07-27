@@ -11,10 +11,10 @@
 		CE05527D195F127D00C94A79 /* Interop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05527B195F127D00C94A79 /* Interop.swift */; };
 		CE05527F195F244400C94A79 /* Optionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05527E195F244400C94A79 /* Optionals.swift */; };
 		CE055280195F244400C94A79 /* Optionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05527E195F244400C94A79 /* Optionals.swift */; };
-		CE055294195F2B8F00C94A79 /* swift-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = CE813A461947FFB200945504 /* swift-Bridging-Header.h */; };
-		CE055296195F2BE800C94A79 /* swift-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = CE813A451947FF9A00945504 /* swift-Bridging-Header.h */; };
 		CE5C4089195BB84A00EB3A13 /* SwiftNonStandardLibrary_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE813A111947FCBA00945504 /* SwiftNonStandardLibrary_iOS.framework */; };
 		CE5C408C195BB84F00EB3A13 /* SwiftNonStandardLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8139F01947FC4400945504 /* SwiftNonStandardLibrary.framework */; };
+		CE6C25BE198181BD00F94848 /* Reflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C25BD198181BD00F94848 /* Reflection.swift */; };
+		CE6C25BF198181BD00F94848 /* Reflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C25BD198181BD00F94848 /* Reflection.swift */; };
 		CE813A031947FC4400945504 /* SwiftNonStandardLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE813A021947FC4400945504 /* SwiftNonStandardLibraryTests.swift */; };
 		CE813A161947FCBA00945504 /* SwiftNonStandardLibrary_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CE813A151947FCBA00945504 /* SwiftNonStandardLibrary_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE813A231947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE813A221947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift */; };
@@ -24,8 +24,8 @@
 		CE924F47197B7E520058E91B /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE924F45197B7E520058E91B /* Net.swift */; };
 		CEEE970C195D051600914127 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE970B195D051600914127 /* Threading.swift */; };
 		CEEE970D195D051600914127 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE970B195D051600914127 /* Threading.swift */; };
-		CEEE970F195D0B9900914127 /* ThreadingTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */; };
-		CEEE9710195D0B9A00914127 /* ThreadingTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */; };
+		CEEE970F195D0B9900914127 /* ThreadingTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEEE9710195D0B9A00914127 /* ThreadingTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEEE9712195D0BFF00914127 /* ThreadingTrampolines.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEE9711195D0BFF00914127 /* ThreadingTrampolines.m */; };
 		CEEE9713195D0BFF00914127 /* ThreadingTrampolines.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEE9711195D0BFF00914127 /* ThreadingTrampolines.m */; };
 		CEF03963195BB45100D4D491 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395B195BB45100D4D491 /* Console.swift */; };
@@ -36,8 +36,8 @@
 		CEF0396D195BB45100D4D491 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395D195BB45100D4D491 /* GCD.swift */; };
 		CEF0396F195BB45100D4D491 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395E195BB45100D4D491 /* main.swift */; };
 		CEF03971195BB45100D4D491 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0395E195BB45100D4D491 /* main.swift */; };
-		CEF03973195BB45100D4D491 /* OSSExceptionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CEF0395F195BB45100D4D491 /* OSSExceptionHelper.h */; };
-		CEF03974195BB45100D4D491 /* OSSExceptionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CEF0395F195BB45100D4D491 /* OSSExceptionHelper.h */; };
+		CEF03973195BB45100D4D491 /* OSSExceptionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CEF0395F195BB45100D4D491 /* OSSExceptionHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEF03974195BB45100D4D491 /* OSSExceptionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CEF0395F195BB45100D4D491 /* OSSExceptionHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEF03975195BB45100D4D491 /* OSSExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF03960195BB45100D4D491 /* OSSExceptionHelper.m */; };
 		CEF03977195BB45100D4D491 /* OSSExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF03960195BB45100D4D491 /* OSSExceptionHelper.m */; };
 		CEF03979195BB45100D4D491 /* Sequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF03961195BB45100D4D491 /* Sequences.swift */; };
@@ -174,6 +174,7 @@
 /* Begin PBXFileReference section */
 		CE05527B195F127D00C94A79 /* Interop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interop.swift; sourceTree = "<group>"; };
 		CE05527E195F244400C94A79 /* Optionals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optionals.swift; sourceTree = "<group>"; };
+		CE6C25BD198181BD00F94848 /* Reflection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reflection.swift; sourceTree = "<group>"; };
 		CE8139F01947FC4400945504 /* SwiftNonStandardLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftNonStandardLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8139F41947FC4400945504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8139F51947FC4400945504 /* SwiftNonStandardLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftNonStandardLibrary.h; sourceTree = "<group>"; };
@@ -186,15 +187,11 @@
 		CE813A1B1947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftNonStandardLibrary_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE813A211947FCBA00945504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE813A221947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNonStandardLibrary_iOSTests.swift; sourceTree = "<group>"; };
-		CE813A451947FF9A00945504 /* swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		CE813A461947FFB200945504 /* swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE8F29EB196122F1006181EE /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		CE924F45197B7E520058E91B /* Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
 		CEEE970B195D051600914127 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
 		CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadingTrampolines.h; sourceTree = "<group>"; };
 		CEEE9711195D0BFF00914127 /* ThreadingTrampolines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadingTrampolines.m; sourceTree = "<group>"; };
-		CEF03959195BB45000D4D491 /* SwiftNonStandardLibraryTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftNonStandardLibraryTests-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		CEF0395A195BB45000D4D491 /* SwiftNonStandardLibrary_iOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftNonStandardLibrary_iOSTests-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		CEF0395B195BB45100D4D491 /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
 		CEF0395C195BB45100D4D491 /* Exceptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exceptions.swift; sourceTree = "<group>"; };
 		CEF0395D195BB45100D4D491 /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
@@ -266,7 +263,6 @@
 		CE8139F21947FC4400945504 /* SwiftNonStandardLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				CE813A461947FFB200945504 /* swift-Bridging-Header.h */,
 				CE8139F51947FC4400945504 /* SwiftNonStandardLibrary.h */,
 				CE8139F31947FC4400945504 /* Supporting Files */,
 			);
@@ -284,7 +280,6 @@
 		CE8139FF1947FC4400945504 /* SwiftNonStandardLibraryTests */ = {
 			isa = PBXGroup;
 			children = (
-				CEF03959195BB45000D4D491 /* SwiftNonStandardLibraryTests-Bridging-Header.h */,
 				CE813A021947FC4400945504 /* SwiftNonStandardLibraryTests.swift */,
 				CE813A001947FC4400945504 /* Supporting Files */,
 			);
@@ -302,7 +297,6 @@
 		CE813A121947FCBA00945504 /* SwiftNonStandardLibrary_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CE813A451947FF9A00945504 /* swift-Bridging-Header.h */,
 				CE813A151947FCBA00945504 /* SwiftNonStandardLibrary_iOS.h */,
 				CE813A131947FCBA00945504 /* Supporting Files */,
 			);
@@ -320,7 +314,6 @@
 		CE813A1F1947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				CEF0395A195BB45000D4D491 /* SwiftNonStandardLibrary_iOSTests-Bridging-Header.h */,
 				CE813A221947FCBA00945504 /* SwiftNonStandardLibrary_iOSTests.swift */,
 				CE813A201947FCBA00945504 /* Supporting Files */,
 			);
@@ -345,15 +338,16 @@
 				CEF0395D195BB45100D4D491 /* GCD.swift */,
 				CE05527B195F127D00C94A79 /* Interop.swift */,
 				CEF0395E195BB45100D4D491 /* main.swift */,
+				CE924F45197B7E520058E91B /* Net.swift */,
 				CE05527E195F244400C94A79 /* Optionals.swift */,
 				CEF0395F195BB45100D4D491 /* OSSExceptionHelper.h */,
 				CEF03960195BB45100D4D491 /* OSSExceptionHelper.m */,
+				CE6C25BD198181BD00F94848 /* Reflection.swift */,
 				CEF03961195BB45100D4D491 /* Sequences.swift */,
 				CEEE970B195D051600914127 /* Threading.swift */,
 				CEEE970E195D0B3B00914127 /* ThreadingTrampolines.h */,
 				CEEE9711195D0BFF00914127 /* ThreadingTrampolines.m */,
 				CEF03962195BB45100D4D491 /* Tuples.swift */,
-				CE924F45197B7E520058E91B /* Net.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -368,7 +362,6 @@
 				CEF03973195BB45100D4D491 /* OSSExceptionHelper.h in Headers */,
 				CEF03981195BB59F00D4D491 /* SwiftNonStandardLibrary.h in Headers */,
 				CEEE970F195D0B9900914127 /* ThreadingTrampolines.h in Headers */,
-				CE055294195F2B8F00C94A79 /* swift-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +370,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF03974195BB45100D4D491 /* OSSExceptionHelper.h in Headers */,
-				CE055296195F2BE800C94A79 /* swift-Bridging-Header.h in Headers */,
 				CE813A161947FCBA00945504 /* SwiftNonStandardLibrary_iOS.h in Headers */,
 				CEEE9710195D0B9A00914127 /* ThreadingTrampolines.h in Headers */,
 			);
@@ -562,6 +554,7 @@
 				CEF0396F195BB45100D4D491 /* main.swift in Sources */,
 				CEF03967195BB45100D4D491 /* Exceptions.swift in Sources */,
 				CEEE9712195D0BFF00914127 /* ThreadingTrampolines.m in Sources */,
+				CE6C25BE198181BD00F94848 /* Reflection.swift in Sources */,
 				CE05527C195F127D00C94A79 /* Interop.swift in Sources */,
 				CEF0397D195BB45100D4D491 /* Tuples.swift in Sources */,
 				CE8F29EC196122F1006181EE /* Box.swift in Sources */,
@@ -591,6 +584,7 @@
 				CEF03971195BB45100D4D491 /* main.swift in Sources */,
 				CEF03969195BB45100D4D491 /* Exceptions.swift in Sources */,
 				CEEE9713195D0BFF00914127 /* ThreadingTrampolines.m in Sources */,
+				CE6C25BF198181BD00F94848 /* Reflection.swift in Sources */,
 				CE05527D195F127D00C94A79 /* Interop.swift in Sources */,
 				CEF0397F195BB45100D4D491 /* Tuples.swift in Sources */,
 				CE8F29ED196122F1006181EE /* Box.swift in Sources */,
@@ -801,7 +795,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftNonStandardLibrary/swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -823,7 +817,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftNonStandardLibrary/swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -848,7 +842,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftNonStandardLibraryTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -869,7 +863,7 @@
 				METAL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftNonStandardLibraryTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -893,7 +887,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftNonStandardLibrary_iOS/swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -914,7 +908,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftNonStandardLibrary_iOS/swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -938,7 +932,7 @@
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftNonStandardLibrary_iOSTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -957,7 +951,7 @@
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftNonStandardLibrary_iOSTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

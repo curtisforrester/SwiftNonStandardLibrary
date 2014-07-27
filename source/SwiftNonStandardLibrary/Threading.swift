@@ -22,10 +22,10 @@ import Foundation
 ///
 ///Note: The OS may place a limit on the total number of slots available; you should not need
 ///to allocate a large number of slots - that is usually an indication of poor design.
-class ThreadLocalSlot<T:AnyObject> {
+public class ThreadLocalSlot<T:AnyObject> {
     let key: pthread_key_t
     
-    init(_ initialValue:T?) {
+    public init(_ initialValue:T?) {
         //bounce to objc land since createkey takes a C function pointer which Swift does not currently deal with
         key = oss_pthread_createKey()
         if initialValue {
@@ -33,7 +33,7 @@ class ThreadLocalSlot<T:AnyObject> {
         }
     }
     
-    convenience init() {
+    public convenience init() {
         self.init(nil)
     }
     
@@ -42,7 +42,7 @@ class ThreadLocalSlot<T:AnyObject> {
         pthread_key_delete(key)
     }
     
-    var value: T? {
+    public var value: T? {
         get {
             let ptr = pthread_getspecific(key)
             if ptr != nil {
